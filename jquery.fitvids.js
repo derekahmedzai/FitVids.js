@@ -16,11 +16,10 @@
       customSelector: null
     }
     
-    var div = document.createElement('div'),
+    var style = document.createElement('style'),
         ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0];
         
-  	div.className = 'fit-vids-style';
-    div.innerHTML = '&shy;<style>         \
+  	style.innerHTML = '&shy;              \
       .fluid-width-video-wrapper {        \
          width: 100%;                     \
          position: relative;              \
@@ -35,10 +34,9 @@
          left: 0;                         \
          width: 100%;                     \
          height: 100%;                    \
-      }                                   \
-    </style>';
+      }';
                       
-    ref.parentNode.insertBefore(div,ref);
+    ref.parentNode.insertBefore(style,ref);
     
     if ( options ) { 
       $.extend( settings, options );
